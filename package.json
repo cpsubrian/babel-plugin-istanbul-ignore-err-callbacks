@@ -1,0 +1,39 @@
+{
+  "name": "babel-plugin-istanbul-ignore-err-callbacks",
+  "description": "Babel plugin to inject `/* istanbul ignore if */` in front of error callbacks.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Brian Link",
+    "email": "cpsubrian@gmail.com"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel src --out-dir lib",
+    "test": "jest --coverage",
+    "test:suite": "jest",
+    "test:watch": "jest --watch",
+    "prepublish": "npm run compile"
+  },
+  "jest": {
+    "testRegex": "/src/.*\\.test\\.js$",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-latest": "^6.22.0",
+    "common-tags": "^1.4.0",
+    "jest": "^19.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpsubrian/babel-plugin-istanbul-ignore-err-callbacks.git"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/cpsubrian/babel-plugin-istanbul-ignore-err-callbacks/issues"
+  },
+  "homepage": "https://github.com/cpsubrian/babel-plugin-istanbul-ignore-err-callbacks#readme"
+}
